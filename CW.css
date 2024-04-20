@@ -56,6 +56,11 @@ a {
   text-decoration: none;
 }
 
+.anchor-container {
+  display: flex;
+  justify-content: center;
+}
+
 a:hover {
   text-decoration: underline;
 }
@@ -217,9 +222,10 @@ input[type="submit"]:hover {
   background-color: #327635;
 }
 .question-box {
-  width: 100%; /* Full width */
+  width: 40%; /* Full width */
+  margin: auto;
   padding: 10px;
-  border: 1px solid #ccc; /* Light gray border for inputs */
+  border: 2px solid #332c2c; /* Light gray border for inputs */
   border-radius: 5px; /* Rounded corners for inputs */
   margin-bottom: 10px; /* Spacing between questions */
   font-size: 16px; /* Larger font size for readability */
@@ -241,4 +247,10 @@ input[type="submit"]:hover {
 .add-question-button:hover,
 .submit-button:hover {
   background-color: #3e8e41; /* Darker green on hover */
+}
+
+.button-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
