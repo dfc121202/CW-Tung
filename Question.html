@@ -9,8 +9,8 @@
 
   <div id="textboxContainer"></div>
 
-  <button onclick="addTextbox()">Ask a question</button>
-  <button onclick="submitQuestions()">Submit Questions</button>
+  <button onclick="addTextbox()" class="add-question-button">Ask a question</button>
+  <button onclick="submitQuestions()" class="submit-button">Submit Questions</button>
   <a href="http://localhost/CW/Home.php">Visit our website</a>
 
 </body>
@@ -23,6 +23,7 @@
     var input = document.createElement("input");
     input.setAttribute("type", "text");
     input.setAttribute("placeholder", "Enter your question here");
+    container.classList.add("question-box");
 
     container.appendChild(input); 
     } else {
@@ -39,6 +40,7 @@
       alert("Please enter question before submitting.");
       return;
     }
+
     var questionInput = questions[0];
     if (questionInput.value.trim() === "") {
       alert("The question box is empty!");
