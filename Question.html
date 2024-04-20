@@ -17,15 +17,17 @@
 <script>
 
   function addTextbox() {
-
+    var existingTextbox = document.getElementById("textboxContainer").querySelector("input[type='text'");
+    if (!existingTextbox) {
     var container = document.getElementById("textboxContainer");
-
-
     var input = document.createElement("input");
     input.setAttribute("type", "text");
     input.setAttribute("placeholder", "Enter your question here");
 
-    container.appendChild(input);
+    container.appendChild(input); 
+    } else {
+      alert("you can only submit one question at a time!")
+    }
   }
 
   function submitQuestions() {
